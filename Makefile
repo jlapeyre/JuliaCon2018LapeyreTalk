@@ -1,4 +1,4 @@
-TALK=juliacon
+TALK=JuliaCon2018_lapeyre
 SHELL=/bin/bash
 
 $(TALK): $(TALK).pdf clean

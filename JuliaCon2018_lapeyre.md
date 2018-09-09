@@ -392,10 +392,10 @@ Out(4) = "mpow(mplus(mpow(x, 2), mpow(y, 2)), 1//2)"
 
 * Design. Symbolic expressions. Mainly standard Python (heavily) OO approach.
   Not suitable for people who want a super calculator.
-  
+
 # When would you use (or not) Symata ?
 
-* Mma. Often used because a student was introducd to it early.
+* Mma. Often used because a student was introduced to it early.
 
 * Super-calculator. Simple programming.
 
@@ -413,65 +413,39 @@ problems. (Jesse [tiling], Jared [Dirac notation], and ...)
 
 #
 
-\begin{centering} 
+\begin{centering}
 \hfill \Huge{Thank you!} \hfill
 \end{centering}
 
-<!--  LocalWords:  Fortran numerics MATLAB Scilab cython Haskell BTA
+<!--  LocalWords:  Lapeyre JuliaCon vspace textcolor AbstractAlgebra
  -->
-<!--  LocalWords:  julia riccati cn cond isfinite webpage PyCall APIs
+<!--  LocalWords:  jl algebraist Symata Mathematica julia symata args
  -->
-<!--  LocalWords:  metaprogramming Coroutines UTF eg JIT inlining OMP
+<!--  LocalWords:  rotheadargs Fateman Pari SymEngine SymPy GCL Hearn
  -->
-<!--  LocalWords:  homoiconic github Filesystem builtin OO Voronoi im
+<!--  LocalWords:  MultivariatePolynomials FullForm Schoonschip OSS
  -->
-<!--  LocalWords:  const num onewalk randbool println STDERR imag BSC
+<!--  LocalWords:  Veltman algolish Macsyma Symbolics Schelter SMP OO
  -->
-<!--  LocalWords:  Lapeyre Bezanson Karpinski Edelman Matlab Rubyists
+<!--  LocalWords:  Macrakis untyped CAS MuPAD MathWorks MATLAB Mixima
  -->
-<!--  LocalWords:  Pythonistas Mathematica PDL perl JL matlab cpython
+<!--  LocalWords:  SageMath Mathics Backend MockMma Mma Matlab Nemo
  -->
-<!--  LocalWords:  datafile jython numpy numba pypy pyston Dev KMOD
+<!--  LocalWords:  transregional Polymake Hecke AlgebraicNumbers Giac
  -->
-<!--  LocalWords:  Modzelewski webserver webservers ize PyPy LOC JS
+<!--  LocalWords:  SemialgebraicSets SymmetricTensors mpmath th hoc
  -->
-<!--  LocalWords:  codebase Lua isinstance jl polymorphism UInt GMP
+<!--  LocalWords:  Greenspun's golang textit repurposes MacroTools ns
  -->
-<!--  LocalWords:  LinAlg linalg xs FFTW BLAS Greenspun's hoc SciPy
+<!--  LocalWords:  REPL multiline Fortran numerics Dev github Rubi
  -->
-<!--  LocalWords:  DSLs Multiline repl Jypyter repo struct Jameson th
+<!--  LocalWords:  Orderless expr countprimes PrimeQ ExpandSinCos KiB
  -->
-<!--  LocalWords:  whoAmI uniqueFunctionA uniqueFunctionB ccall libc
+<!--  LocalWords:  SinRule CosRule integ ReplaceAll applySum juliaSum
  -->
-<!--  LocalWords:  pyimport mpmath ellip ellipe ellipf ellipfun ribot
+<!--  LocalWords:  hspace frac hfill cexpr ccexpr symzeta SymataCall
  -->
-<!--  LocalWords:  ellipk ellippi elliprc elliprd elliprf elliprg RNG
+<!--  LocalWords:  ExportJ hypot Sqrt ToJuliaString NoSymata mpow UIs
  -->
-<!--  LocalWords:  elliprj rwtest cpp Mersenne pdf displacments Bool
- -->
-<!--  LocalWords:  gcc RNG's AbstractAlgebra algebraist Symata symata
- -->
-<!--  LocalWords:  rotheadargs args Schoonschip Macsyma Symbolics OSS
- -->
-<!--  LocalWords:  untyped SMP matcher MuPAD MathWorks SageMath SymPy
- -->
-<!--  LocalWords:  Nemo Hecke AlgebraicNumbers SemialgebraicSets Giac
- -->
-<!--  LocalWords:  SymmetricTensors MultivariatePolynomials SymEngine
- -->
-<!--  LocalWords:  golang textcolor textit repurposes MacroTools Mma
- -->
-<!--  LocalWords:  multiline FullForm Rubi Orderless ExpandSinCos ns
- -->
-<!--  LocalWords:  ExpandSinRule ExpandCosRule ReplaceRepeated integ
- -->
-<!--  LocalWords:  ReplaceAll expr vspace applySum juliaSum hspace
- -->
-<!--  LocalWords:  frac hfill symzeta SymataCall ExportJ hypot Sqrt
- -->
-<!--  LocalWords:  ToJuliaString NoSymata mpow mplus mmul btime KiB
- -->
-<!--  LocalWords:  sucess UIs sympy sym ExpToTrig Sinh jit algolish
- -->
-<!--  LocalWords:  CAS
+<!--  LocalWords:  mplus mmul btime sucess Shifrin integrands
  -->
