@@ -1,6 +1,7 @@
 % Symbolic computation in Julia
 % John Lapeyre
-% JuliaCon 2018, August 11, 2018
+% JuliaCon 2018, August 11, 2018 \quad \textcolor{red}{Updated September 9, 2018}
+
 
 # What is Computer algebra / Symbolic computation ?
 
@@ -51,13 +52,18 @@ q &= p * (p + 1) \\
 $\vspace{-1.5cm}$
 
 * Polynomial problem one $n = 20$
-  * $0.19$ AbstractAlgebra.jl
-  * $1.50$  Pari. (not really)
-  * $3.80$  SymEngine.jl
-  * $7.70$  Mathematica 3
-  * $198$  MultivariatePolynomials.jl
+  * $0.05$s [TaylorSeries.jl](https://github.com/JuliaDiff/TaylorSeries.jl) (with 128 bit integers)
+  * $0.19$ [AbstractAlgebra.jl](https://nemocas.github.io/AbstractAlgebra.jl/index.html)
+  * $0.12$--$0.28$s Mathematica
+  * $1.25$s [TaylorSeries.jl](https://github.com/JuliaDiff/TaylorSeries.jl) (with arbitrary precision integers)
+  * $1.50$  Pari
+  * $3.80$  [SymEngine.jl](https://github.com/symengine/SymEngine.jl)
+  * $7.70$  Mathematica
+  * $198$  [MultivariatePolynomials.jl](https://github.com/JuliaAlgebra/MultivariatePolynomials.jl)
   * $490$  SymPy (SymPy, SymPy.jl, ...)
-  * $870$  Maxima (GCL) (projected)
+  * $3347$  Maxima (sbcl)
+
+$\vspace{-0.5cm}$
 
 ```julia
 symata 1> FullForm(1 + 3x + 4x^2)
@@ -76,12 +82,12 @@ Changing hardware; OS; personal and organizational goals.
 * [Maxima](https://en.wikipedia.org/wiki/Maxima_(software)) *1982--1998--present Common Lisps*. OSS fork of Macsyma.
   Schelter. Now Macsyma people: Fateman, Macrakis, and others.
 
-* Maple *1980-1988--present C core*. Expressions $+$ Algol-like language.
+* Maple *1980-1988--present C core*. Expressions $+$ Pascal-like language.
  "An interpreted, untyped, procedural language with lexical scoping and first-class procedures."
 
 * [SMP: Symbolic Manipulation Program](https://en.wikipedia.org/wiki/Symbolic_Manipulation_Program)
   *1979--1981--1988 C core*. Chris. A. Cole and S. Wolfram. Pattern matching and
-  expressions. "version 0 of Mathematica". Very popular in CAS research at least by 1984.
+  expressions. "version 0 of Mathematica". Very popular in CAS research by at least 1984.
 
 <!-- * MuPAD 1997. Pascal-like. Somewhat typed. Bought by MathWorks. -->
 
@@ -228,6 +234,8 @@ Levels, "iterators"
 
 # Simplification function `ExpandSinCos`
 
+\textcolor{blue}{Implement the angle-addition formulas.}
+
 ```julia
 SinRule = Sin(a_ + b__) :>
    Cos(Plus(b)) * Sin(a) + Cos(a) * Sin(Plus(b))
@@ -235,7 +243,7 @@ CosRule = Cos(a_ + b__) :>
    Cos(a) * Cos(Plus(b)) - Sin(a) * Sin(Plus(b))
 ExpandSinCos(ex_) := ex .\\ [SinRule, CosRule]
 ```
-\textcolor{blue}{Apply this function (or rule)}
+\textcolor{blue}{Apply this function (or rule).}
 
 ```julia
 symata 1> ExpandSinCos(1 + Sin(x + y + w*z))
@@ -399,17 +407,17 @@ Out(4) = "mpow(mplus(mpow(x, 2), mpow(y, 2)), 1//2)"
 
 * Super-calculator. Simple programming.
 
-* Prototyping. (L Shifrin)
+* Useful for prototyping an idea. (L Shifrin)
 
 * Can be very slow, even Mma, after lots of years and dollars.
 
 * *Julia* may be a substitute for special purpose "symbolic" or discrete
 problems. (Jesse [tiling], Jared [Dirac notation], and ...)
 
-* Completeness in domains. Want lots of special functions, high precision, complex ?
+* Mma has completeness in domains. Want lots of special functions, high precision, complex ?
 (E.g. inverse Laplace transform). Integrate exotic integrands over exotic domains.
 
-* Most likely will want to break out of the expression/evaluation model.
+* Symata most likely will want to break out of the expression/evaluation model.
 
 #
 
@@ -447,5 +455,7 @@ problems. (Jesse [tiling], Jared [Dirac notation], and ...)
  -->
 <!--  LocalWords:  ExportJ hypot Sqrt ToJuliaString NoSymata mpow UIs
  -->
-<!--  LocalWords:  mplus mmul btime sucess Shifrin integrands
+<!--  LocalWords:  mplus mmul btime sucess Shifrin integrands sbcl
+ -->
+<!--  LocalWords:  TaylorSeries
  -->
